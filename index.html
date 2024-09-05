@@ -3,26 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Black Background Website</title>
+    <title>JavaScript Popup Example</title>
     <style>
-        body {
-            background-color: black;
-            color: white;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 50px;
+        /* Basic styling for the popup */
+        .popup {
+            display: none;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
         }
-        h1 {
-            font-size: 3em;
-        }
-        p {
-            font-size: 1.5em;
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
         }
     </style>
 </head>
 <body>
-    <h1>Welcome to My Website</h1>
-    <p>This website has a black background!</p>
+
+<a href="#" id="popupLink">Click me for a popup!</a>
+
+<div class="overlay" id="overlay"></div>
+<div class="popup" id="popup">
+    <p>This is a popup message!</p>
+    <button id="closePopup">Close</button>
+</div>
+
+<script>
+    // Get elements
+    const popupLink = document.getElementById('popupLink');
+    const popup = document.getElementById('popup');
+    const overlay = document.getElementById('overlay');
+    const closePopup = document.getElementById('closePopup');
+
+    // Show popup on link click
+    popupLink.onclick = function(event) {
+        event.preventDefault(); // Prevent the default link behavior
+        popup.style.display = 'block';
+        overlay.style.display = 'block';
+    };
+
+    // Close popup
+    closePopup.onclick = function() {
+        popup.style.display = 'none';
+        overlay.style.display = 'none';
+    };
+
+    // Close popup when clicking outside of it
+    overlay.onclick = function() {
+        popup.style.display = 'none';
+        overlay.style.display = 'none';
+    };
+</script>
+
 </body>
 </html>
-
