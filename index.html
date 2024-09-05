@@ -32,11 +32,12 @@
 </head>
 <body>
 
-<a href="#" id="popupLink">Click me for a popup!</a>
+<a href="https://www.example.com" id="popupLink">Click me for a popup!</a>
 
 <div class="overlay" id="overlay"></div>
 <div class="popup" id="popup">
     <p>This is a popup message!</p>
+    <button id="continueLink">Continue to Link</button>
     <button id="closePopup">Close</button>
 </div>
 
@@ -46,6 +47,7 @@
     const popup = document.getElementById('popup');
     const overlay = document.getElementById('overlay');
     const closePopup = document.getElementById('closePopup');
+    const continueLink = document.getElementById('continueLink');
 
     // Show popup on link click
     popupLink.onclick = function(event) {
@@ -64,6 +66,11 @@
     overlay.onclick = function() {
         popup.style.display = 'none';
         overlay.style.display = 'none';
+    };
+
+    // Continue to the hyperlink
+    continueLink.onclick = function() {
+        window.location.href = popupLink.href; // Redirect to the hyperlink
     };
 </script>
 
