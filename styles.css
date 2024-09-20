@@ -1,0 +1,118 @@
+body {
+    background-color: #333; /* Dark grey background for the body */
+    color: white; /* White text for better contrast */
+    font-family: 'Courier New', Courier, monospace; /* Monospace font for body */
+    text-align: center; /* Center text for the entire body */
+    margin: 0; /* Remove default margin */
+}
+
+.top-section {
+    background-color: #015d6d; /* Darker blue background for the top section */
+    height: 15vh; /* Set height to 15% of the viewport height */
+    display: flex; /* Use flexbox to center content */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+}
+
+h1 {
+    text-shadow: 
+        -1px -1px 0 #000,  
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000; /* Black outline effect */
+}
+
+p {
+    font-family: 'Times New Roman', Times, serif; /* Times New Roman font for paragraphs */
+}
+
+ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Use flexbox to arrange items in a row */
+    justify-content: center; /* Center the items horizontally */
+    flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
+}
+
+li {
+    margin: 10px; /* Add some space between items */
+}
+
+a {
+    color: #1E90FF; /* Normal link color */
+    text-decoration: none; /* Remove underline from links */
+    font-family: 'Impact', sans-serif; /* Impact font for link text */
+    display: block; /* Make the link a block element */
+    font-style: italic; /* Make the Impact font italic */
+}
+
+a:visited {
+    color: #6A5ACD; /* Color for visited links */
+}
+
+a:hover {
+    color: #FF4500; /* Color when hovering over the link */
+    text-decoration: underline; /* Underline on hover */
+}
+
+
+a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+img {
+    width: 100px; /* Set a fixed width for images */
+    height: 100px; /* Maintain aspect ratio */
+    display: block; /* Make images block elements */
+    margin: 0 auto 30px; /* Center images and add 10px bottom margin */
+    transition: transform 0.2s ease; /* Smooth transition for scaling */
+}
+
+
+
+
+img:hover {
+    transform: scale(1.1); /* Scale the image to 110% on hover */
+}
+
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with transparency */
+}
+
+.modal-content {
+    background: linear-gradient(to bottom right, #0c8e4f, #0378a3); /* Gradient background */
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888; /* Optional border */
+    width: 50%; /* Adjusted width to 50% */
+    max-width: 400px; /* Optional: set a maximum width */
+    text-align: center; /* Center text */
+    border-radius: 10px; /* Rounded corners */
+}
+
+
+button {
+    margin: 10px; /* Space between buttons */
+    padding: 10px 20px; /* Button padding */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+#confirm-button {
+    background-color: #0c8e4f; /* Confirm button color */
+    color: white; /* Text color */
+}
+
+#cancel-button {
+    background-color: #f44336; /* Cancel button color */
+    color: white; /* Text color */

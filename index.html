@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Links with Text</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to the external stylesheet -->
+    <link rel="icon" href="shitting.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="top-section">
+        <h1>Kamaad's Homepage</h1>
+    </div>
+    <ul>
+    <li>
+        <a href="https://plex.kamaad.gg" target="_blank" onclick="confirmLink(event, 'Plex')">
+            <img src="plex.jpg" alt="Plex">
+            <span>Plex</span>
+        </a>
+    </li>
+    <li>
+        <a href="https://radarr.kamaad.gg" target="_blank" onclick="confirmLink(event, 'Radarr')">
+            <img src="radarr.jpg" alt="Radarr">
+            <span>Radarr</span>
+        </a>
+    </li>
+    <li>
+        <a href="https://sonarr.kamaad.gg" target="_blank" onclick="confirmLink(event, 'Sonarr')">
+            <img src="sonarr.jpg" alt="Sonarr">
+            <span>Sonarr</span>
+        </a>
+    </li>
+    <li>
+        <a href="https://overseerr.kamaad.gg" target="_blank" onclick="confirmLink(event, 'Overseerr')">
+            <img src="overseerr.jpg" alt="Overseerr">
+            <span>Overseerr</span>
+        </a>
+    </li>
+    <li>
+        <a href="https://sabnzbd.kamaad.gg" target="_blank" onclick="confirmLink(event, 'SABnzbd')">
+            <img src="sabnzbd.jpg" alt="SABnzbd">
+            <span>SABnzbd</span>
+        </a>
+    </li>
+</ul>
+
+
+    <br> <!-- Line break to separate the two rows -->
+    <ul>
+        <li>
+            <a href="https://www.example1.com" onclick="confirmLink(event, 'Example 1')">
+                <img src="https://via.placeholder.com/100" alt="Link 1">
+                <span>Link 1</span>
+            </a>
+        </li>
+        <li>
+            <a href="https://www.example2.com" onclick="confirmLink(event, 'Example 2')">
+                <img src="https://via.placeholder.com/100" alt="Link 2">
+                <span>Link 2</span>
+            </a>
+        </li>
+        <li>
+            <a href="https://www.example3.com" onclick="confirmLink(event, 'Example 3')">
+                <img src="https://via.placeholder.com/100" alt="Link 3">
+                <span>Link 3</span>
+            </a>
+        </li>
+        <li>
+            <a href="https://www.example4.com" onclick="confirmLink(event, 'Example 4')">
+                <img src="https://via.placeholder.com/100" alt="Link 4">
+                <span>Link 4</span>
+            </a>
+        </li>
+        <li>
+            <a href="https://www.example5.com" onclick="confirmLink(event, 'Example 5')">
+                <img src="https://via.placeholder.com/100" alt="Link 5">
+                <span>Link 5</span>
+            </a>
+        </li>
+    </ul>
+
+    <div id="modal" class="modal" role="dialog" aria-labelledby="modal-title" aria-describedby="modal-message" aria-hidden="true">
+    <div class="modal-content">
+        <h2 id="modal-title">Confirmation</h2>
+        <p id="modal-message"></p>
+        <button id="confirm-button">Yes</button>
+        <button id="cancel-button">No</button>
+    </div>
+</div>
+
+
+    <script src="script.js"></script> <!-- Link to the external JavaScript file -->
+</body>
+</html>
